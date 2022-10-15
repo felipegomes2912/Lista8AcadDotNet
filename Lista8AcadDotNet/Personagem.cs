@@ -12,7 +12,7 @@ namespace Lista8AcadDotNet
         public string nome;
         public int poder;
 
-        public Personagem(){}
+        public Personagem() { }
 
         public Personagem(string nome, int poder)
         {
