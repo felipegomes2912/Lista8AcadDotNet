@@ -187,12 +187,34 @@ namespace Lista8AcadDotNet
 
 
             //Exercício 5
-            /**/
+            /*
+            List<PlanoCartesiano> lista = new List<PlanoCartesiano>();
+            PlanoCartesiano cartesiano = new PlanoCartesiano();
+            int op = 1;           
 
 
+            do
+            {
+                Console.Write("Digite o valor de X: ");
+                cartesiano.X = int.Parse(Console.ReadLine());
 
+                Console.Write("Digite o valor de Y: ");
+                cartesiano.Y = int.Parse(Console.ReadLine());
 
+                lista.Add(new PlanoCartesiano { X = cartesiano.X, Y = cartesiano.Y });
 
+                Console.Write("Continuar? (1 - SIM / 2 - NÃO): ");
+                op = int.Parse(Console.ReadLine());
+                Console.WriteLine("-------------------------");
+            } while (op != 2);
+
+            foreach (PlanoCartesiano item in lista)
+            {
+                Console.WriteLine("Coleta de dados nº" + (lista.IndexOf(item) + 1) + ": ");
+                Console.WriteLine("[" + item.X + "," + item.Y + "]");
+                Console.WriteLine("-------------------------");
+            }
+            */
 
 
 

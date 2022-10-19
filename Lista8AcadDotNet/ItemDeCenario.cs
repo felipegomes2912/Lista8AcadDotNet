@@ -13,7 +13,7 @@ namespace Lista8AcadDotNet
         private DateTime dataCriacao = new DateTime(2021, 12, 16, 17, 47, 51);
         private float altura;
 
-        public ItemDeCenario() {}
+        public ItemDeCenario() { }
 
         public string Descricao { get => descricao; set => descricao = value; }
         public DateTime DataCriacao { get => dataCriacao; set => dataCriacao = value; }
