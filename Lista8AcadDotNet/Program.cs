@@ -1,11 +1,14 @@
-﻿namespace Lista8AcadDotNet
+﻿using System.Data;
+using System.Runtime.CompilerServices;
+
+namespace Lista8AcadDotNet
 {
     internal class Program
     {
         static void Main(string[] args)
         {
             //Exercício 1
-            /**/
+            /*
             string nome = "";
             int poder, aux = 0;
             List<Personagem> personagens = new List<Personagem>(3);
@@ -86,6 +89,127 @@
                 }
 
             } while (true);
+            */
+
+
+
+            //Exercício 2
+            /*
+            string nome, raca, tipo;
+            int tamanho, contCachorro = 0, contGato = 0, contPeixe = 0;
+            Animal animal = new Animal();
+            List<Animal> lista = new List<Animal>();
+
+            do
+            {
+                Console.Write("Nome do animal: ");
+                nome = Console.ReadLine();
+                animal.SetNome(nome);
+
+                Console.Write("Tipo do animal (cachorro, gato ou peixe): ");
+                tipo = Console.ReadLine();
+                while (tipo != "Cachorro" && tipo != "Gato" && tipo != "Peixe")
+                {
+                    Console.Write("Tipo inválido. Digite um novo tipo: ");
+                    tipo = Console.ReadLine();
+                }
+
+                if (tipo == "Cachorro")
+                {
+                    contCachorro++;
+                }
+                else if (tipo == "Gato")
+                {
+                    contGato++;
+                }
+                else if (tipo == "Peixe")
+                {
+                    contPeixe++;
+                }
+
+                Console.Write("Raça do animal: ");
+                raca = Console.ReadLine();
+                animal.SetRaca(raca);
+
+                Console.Write("Tamanho do animal: ");
+                tamanho = int.Parse(Console.ReadLine());
+                animal.SetTamanho(tamanho);
+
+                lista.Add(animal);
+            } while (lista.Count() < 5);
+
+            Console.WriteLine("---------------");
+            Console.WriteLine("Total de cachorros: " + contCachorro);
+            Console.WriteLine("Total de gatos: " + contGato);
+            Console.WriteLine("Total de peixes: " + contPeixe);
+            */
+
+
+
+            //Exercício 3
+            /*
+            List<Asteroides> asteroides_lista = new List<Asteroides>();
+            Random random = new Random();
+
+            Asteroides asteroides1 = new Asteroides(random.Next(0, 10), random.Next(0, 10), random.Next(1, 5), random.Next(1, 5), random.Next(1, 5));
+            asteroides_lista.Add(asteroides1);
+
+            Asteroides asteroides2 = new Asteroides(random.Next(0, 10), random.Next(0, 10), random.Next(1, 5), random.Next(1, 5), random.Next(1, 5));
+            asteroides_lista.Add(asteroides2);
+
+            foreach (Asteroides item in asteroides_lista)
+            {
+                Console.WriteLine("Asteróide " + (asteroides_lista.IndexOf(item) + 1) + ": ");
+                Console.WriteLine("Posição: " + "[" + item.X + "," + item.Y + "]");
+                Console.WriteLine("Tamanho: " + item.Tamanho);
+                Console.WriteLine("Velocidade: " + item.Velocidade);
+                Console.WriteLine("Energia: " + item.Energia);
+                Console.WriteLine("-------------------");
+            }
+            */
+
+
+
+            //Exercício 4
+            /*
+            ItemDeCenario item = new ItemDeCenario();
+            Console.Write("Altura: ");
+            item.Altura = float.Parse(Console.ReadLine());
+            Console.Write("Data de criação (DD/MM/AAAA HH/MM/SS): ");
+            item.DataCriacao = DateTime.Parse(Console.ReadLine());
+            Console.Write("Descrição: ");
+            item.Descricao = Console.ReadLine();
+            Console.WriteLine("----------------------");
+            item.ImprimeDados(item.Descricao, item.DataCriacao, item.Altura);
+            item.CalculaTempo(item.DataCriacao);
+            */
+
+
+
+            //Exercício 5
+            /**/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         }
     }
 }
